@@ -9,7 +9,7 @@ serverSocket.bind(('', serverPort)) # Bind the socket to the port
 
 serverSocket.listen(1) # Listen for incoming connections
 
-# In while loop, keep waits for and accepts client's connection request
+# In while loop, keep waiting for and accepting client's connection request
 while True:
     # Accept the connection request from a client
     cnSocket, addr = serverSocket.accept()
