@@ -9,24 +9,26 @@ serverSocket.bind(('', serverPort)) # Bind the socket to the port
 
 serverSocket.listen(1) # Listen for incoming connections
 
-# Accept the connection request from a client
-cnSocket, addr = serverSocket.accept()
-print(f"Connection from {addr}")
+# In while loop, keep waits for and accepts client's connection request
+while True:
+    # Accept the connection request from a client
+    cnSocket, addr = serverSocket.accept()
+    print(f"Connection from {addr}")
+    
+    # Receive the message
+    whole_msg = cnSocket.recv(64).decode()
+    msg_length = int(whole_msg[:2])
+    message = whole_msg[2:]
+    print(f"msg_len: {msg_length}")
+    print(f"processed: {message}")
 
-# Receive the message
-whole_msg = cnSocket.recv(64).decode()
-msg_length = int(whole_msg[:2])
-message = whole_msg[2:]
-print(f"msg_len: {msg_length}")
-print(f"processed: {message}")
+    # Process the message
+    capSentence = message.upper() # convert to uppercase
 
-# Process the message
-capSentence = message.upper() # convert to uppercase
+    # Send back the modified message
+    cnSocket.send(capSentence.encode()) 
+    print(f"msg_len_sent: {len(capSentence)}")
 
-# Send back the modified message
-cnSocket.send(capSentence.encode()) 
-print(f"msg_len_sent: {len(capSentence)}")
-
-# Close the connection
-print("Connection closed\n")
-cnSocket.close()
+    # Close the connection for one client
+    print("Connection closed\n")
+    cnSocket.close()
