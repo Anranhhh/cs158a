@@ -16,7 +16,7 @@ Execute command: `python mychatserver.py` -> server starts waiting for the clien
 ### Step 2. Run the client
 Open multiple terminal windows:
 
-Execute command: `python myvlclient.py`
+Execute command: `python mychatclient.py`
 
 ### Step 3. Build the connections
 Make sure that all clients are connected to the server, which means they are in the same chat now
