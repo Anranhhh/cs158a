@@ -1,0 +1,6 @@
+Sent: 84656904-26a1-48bb-8e6c-64379fceec09, flag=0
+Received: 78e6e72e-1615-4889-9510-853c31cbee83, flag=0, less, 0
+Received: 84656904-26a1-48bb-8e6c-64379fceec09, flag=0, same, 0
+Leader is decided to 84656904-26a1-48bb-8e6c-64379fceec09
+Sent: 84656904-26a1-48bb-8e6c-64379fceec09, flag=1
+Received: 84656904-26a1-48bb-8e6c-64379fceec09, flag=1, same, 1
