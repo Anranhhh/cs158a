@@ -2,8 +2,8 @@
 
 ## Files Included
 - `myleprocess.py`: the process to be part of the election ring
-- `config.txt`: the aforementioned config file
-- log1.txt, log2.txt, log3.txt: log files from the three processes in your local demo
+- `config.txt`: the config file, which includes IP addresses and port numbers
+- `log1.txt`, `log2.txt`, `log3.txt`: log files from the three processes in your local demo
 - `README.md`: instructions and execution examples/test cases
 
 ## Run the Program
@@ -15,14 +15,18 @@ Includes `config.txt` and `myleprocess.py` under separate folders.
 Run `myleprocess.py` in separate terminals.
 
 ## Execution Example & Output
-process 1:
+Terminal 1:
 
-<img width="344" alt="Screenshot 2025-07-09 at 2 00 46 AM" src="https://github.com/user-attachments/assets/eee8365e-cc08-4072-afcf-5b38f405c265" />
+<img width="435" height="112" alt="Screenshot 2025-07-20 at 4 18 27 PM" src="https://github.com/user-attachments/assets/7f41ac35-e4e4-44b4-8cce-c55b5d35f1e0" />
 
-process 2:
+Terminal 2:
 
-<img width="344" alt="Screenshot 2025-07-09 at 2 01 22 AM" src="https://github.com/user-attachments/assets/304ca6c1-702d-4c0e-9bde-1cebc2cd634f" />
+<img width="435" height="112" alt="Screenshot 2025-07-20 at 4 19 14 PM" src="https://github.com/user-attachments/assets/7b64a7d7-d853-4b70-9182-aa7a13b8d809" />
 
-process 3:
+Terminal 3:
 
-<img width="434" alt="Screenshot 2025-07-09 at 2 01 47 AM" src="https://github.com/user-attachments/assets/11173783-7553-4089-b7ca-980264adb1c6" />
+<img width="435" height="112" alt="Screenshot 2025-07-20 at 4 19 55 PM" src="https://github.com/user-attachments/assets/2f8b878a-c668-482c-8fd8-8c835808d58b" />
+
+- At the end, the leader with the largest uuid is decided.
+- Under the three folders, `log.txt` will be created with received and sent messages.
+
