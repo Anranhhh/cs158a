@@ -1,0 +1,8 @@
+Sent: uuid=bbaa2ff0-1489-4796-869b-e2d336ec3f00, flag=0
+Received: uuid=6a3abcb4-d69b-423a-b1f0-4f51ef956104, flag=0, less, 0
+Ignored message from uuid=6a3abcb4-d69b-423a-b1f0-4f51ef956104, flag=0
+Received: uuid=bbaa2ff0-1489-4796-869b-e2d336ec3f00, flag=0, equal, 0
+Leader is decided to bbaa2ff0-1489-4796-869b-e2d336ec3f00.
+Sent: uuid=bbaa2ff0-1489-4796-869b-e2d336ec3f00, flag=1
+Received: uuid=bbaa2ff0-1489-4796-869b-e2d336ec3f00, flag=1, equal, 1
+Leader is bbaa2ff0-1489-4796-869b-e2d336ec3f00
