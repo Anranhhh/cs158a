@@ -69,8 +69,7 @@ def server_thread():
 
         msg_uuid = uuid.UUID(msg.uuid)
         cmp = "greater" if msg_uuid > node_id else "less" if msg_uuid < node_id else "equal"
-        log(f"Received: uuid={msg.uuid}, flag={msg.flag}, {cmp}, {state}, "
-            f"{leader_id if state else 'N/A'}")
+        log(f"Received: uuid={msg.uuid}, flag={msg.flag}, {cmp}, {state}")
 
         # Election in progress
         if msg.flag == 0:
@@ -127,15 +126,12 @@ client_ready = threading.Event()
 
 while True:
     try:
-        # print(f"Trying to connect to {NB_ADDR}", flush=True)
         client_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
         client_sock.connect(NB_ADDR)
-        # print(f"Connected to neighbor at {NB_ADDR}", flush=True)
         client_ready.set()
         break
     except ConnectionRefusedError:
-        # print(f"Waiting for neighbor at {NB_ADDR}...", flush=True)
         client_sock.close()
         time.sleep(1)
 
